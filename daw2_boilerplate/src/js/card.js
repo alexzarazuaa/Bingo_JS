@@ -154,7 +154,8 @@ function line(card2, extractedball) {
                     if (int == 1) {
                         alert('int 1')
                         pubSub.publish('linea');
-                    } else if (int == 3) {
+                    }
+                     if (int == 3) {
                         alert('YEES BINGO')
                         pubSub.publish('bingo');
                     }
