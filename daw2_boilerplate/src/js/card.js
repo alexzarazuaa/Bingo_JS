@@ -1,4 +1,7 @@
-//card no ha de tindre ningun metode public, soles li puc pasar en quin element del html es te que pintar
+
+//comprobar que cante be el bingo y la //arreglar el render que pinta la linea y el bingo
+//implementar el unsubscriber en la linea,borrar el que estiguen suscrits a linea
+
 import { pubSub } from './pubsub.js'
 import { app } from '../index.js'
 

@@ -1,4 +1,3 @@
-
 //metodos publicar i suscribirse
 
 export let pubSub = {
