@@ -1,8 +1,9 @@
 import video from '../videos/los_bingueros.mp4';
 import audio from '../audios/Bingo Sound Effect.mp3';
 import { app } from '../index.js';
-import { debug, clearModal } from '../js/core/core';
+import { debug, clearModal, showModal } from '../js/core/core';
 import '../css/modalPlayers.css';
+import { GameMenu } from './modalGameMenu';
 
 /**
  * Set the backgroundVideo 
@@ -70,7 +71,7 @@ export const modalPlayers = () => {
                 })
                 uList.appendChild(li);
             });
-            document.getElementById('remainingPlayersSpan').innerHTML = "Players: "+playersNames.length + "/50 "; // At the moment the max players are static
+            document.getElementById('remainingPlayersSpan').innerHTML = "Players: " + playersNames.length + "/50 "; // At the moment the max players are static
         }
 
         /*
@@ -108,7 +109,7 @@ export const modalPlayers = () => {
         }
 
 
-        
+
         /**
          * Add player on press enter key
          */
@@ -118,7 +119,7 @@ export const modalPlayers = () => {
                 document.getElementById("addplayer").click();
             }
         });
-      
+
         /**
          * Here you have the set interval  time options
          */
@@ -140,15 +141,31 @@ export const modalPlayers = () => {
             if (event.target.value <= 0) event.target.value = 0.1;
             if (event.target.value > 5) event.target.value = 5;
         });
-       
-     
+
+
         let remove_video = document.getElementById('remove_video');
         let div_bg = document.getElementById('div_bg');
 
         /**
+         * On click Menu button , back to main menu
+         */
+
+        let menuGame = document.getElementById('menuGame');
+        menuGame.onclick = function () {
+            console.log('MENU BTN')
+            let m = document.getElementById('playersForm');
+            m.style.display = "none";
+            div_bg.remove();
+            showModal(GameMenu());
+
+
+        }
+
+
+        /**
          * On click play Button, game starts.
          */
-        
+
         let playBtn = document.getElementById('playBtn');
         playBtn.onclick = function () {
             if (playersNames.length !== 0 && playersNames != undefined) { //Check there are players added to the game
@@ -166,7 +183,7 @@ export const modalPlayers = () => {
         /**
          * Mute and unmute the background video button
          */
-        
+
         let unmuteBtn = document.getElementById('unmuteBtn');
         let videoEl = document.getElementById('videoBackground');
         unmuteBtn.onclick = function () {
@@ -177,7 +194,7 @@ export const modalPlayers = () => {
         /**
          * Remove / show video background
          */
-        
+
         remove_video.onclick = function () {
             if (this.classList.contains('off--red')) {
                 this.className = "fas fa-video-slash btn--removebg"
@@ -194,11 +211,11 @@ export const modalPlayers = () => {
         */
 
         let exportBtn = document.getElementById('export');
-        exportBtn.addEventListener('click', function() {    
+        exportBtn.addEventListener('click', function () {
             let players = JSON.parse(localStorage.getItem("playersNames")).map(e => e);
             if (players.length != 0) {
-                let csvContent = "data:text/csv;charset=utf-8," 
-                + players;
+                let csvContent = "data:text/csv;charset=utf-8,"
+                    + players;
                 let encodedUri = encodeURI(csvContent);
                 var link = document.createElement("a");
                 link.setAttribute("href", encodedUri);
@@ -216,8 +233,8 @@ export const modalPlayers = () => {
         */
 
         let importBtn = document.getElementById('import');
-        importBtn.addEventListener('click', function() {    
-            let link = document.getElementById('import-file');             
+        importBtn.addEventListener('click', function () {
+            let link = document.getElementById('import-file');
             link.click();
         });
 
@@ -227,8 +244,8 @@ export const modalPlayers = () => {
             if (files[0].type == "text/csv") {
                 let reader = new FileReader;
                 reader.readAsText(files[0]);
-                reader.onload = function(e) {
-                    localStorage.setItem("playersNames",JSON.stringify(reader.result.split(',')));
+                reader.onload = function (e) {
+                    localStorage.setItem("playersNames", JSON.stringify(reader.result.split(',')));
                     renderPlayerList();
                     input_file.value = "";
                 };
@@ -236,7 +253,7 @@ export const modalPlayers = () => {
             } else {
                 document.getElementById('msg--err').innerHTML = "\u26A0  The file isn't valid"
             }
-          }, false);
+        }, false);
     }
 
     return {
@@ -246,6 +263,7 @@ export const modalPlayers = () => {
                 <!-- Modal content -->
                 <div class="modal-content">
                     <h1>BINGO TWINGO</h1>
+                    <button id='menuGame' class="menu__game_btn">MENU</button>
                     <p></p>
                     <div class='modal__players__list'>
                         <ol id="listPlayers"></ol>

@@ -41,9 +41,18 @@ const app = (() => {
         }
     };
 
+    /**
+     * Starts offline  Bingo
+     */
+
     let playOffline = () => {
         showModal(modalPlayers(),app.start);
     }
+
+    /**
+     * Starts online  bingo
+     */
+    //let playOnline = () =>
 
     /* Stop bingo play an clear timer */ 
     let stop = () => {
