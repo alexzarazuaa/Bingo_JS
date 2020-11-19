@@ -45,7 +45,7 @@ const app = (() => {
         showModal(modalPlayers(),app.start);
     }
 
-    /* Stop bingo play an clear timer */
+    /* Stop bingo play an clear timer */ 
     let stop = () => {
         stateApp = "stop";
         clearInterval(myApp);
