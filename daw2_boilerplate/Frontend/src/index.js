@@ -9,6 +9,11 @@ import { PubSub } from './js/core/pubSub.js';
 import { modalPlayers, setupAudioBingoWin } from './templates/modalPlayers.js';
 import { modalLiniaBingo } from './templates/modalLiniaBingo.js';
 import { GameMenu } from './templates/modalGameMenu.js';
+/**
+ * import io from 'socket.io-client';
+ * const socket = io();
+ */
+
 
 /**
  * Within the app constant(closure), we have defined several variables with anonymous functions which are responsible for starting and stopping the game
@@ -35,7 +40,7 @@ const app = (() => {
         if (num) {
             pubSub.publish("New Number", bombo.getExtractedNumbers());
 
-        /* otherwise means bombo is running out of ball and we should finish the game */    
+            /* otherwise means bombo is running out of ball and we should finish the game */
         } else {
             stop();
         }
@@ -46,7 +51,7 @@ const app = (() => {
      */
 
     let playOffline = () => {
-        showModal(modalPlayers(),app.start);
+        showModal(modalPlayers(), app.start);
     }
 
     /**
@@ -54,14 +59,14 @@ const app = (() => {
      */
     //let playOnline = () =>
 
-    /* Stop bingo play an clear timer */ 
+    /* Stop bingo play an clear timer */
     let stop = () => {
         stateApp = "stop";
         clearInterval(myApp);
     }
     /* Start bingo play */
     let start = () => {
-        
+
         /* Basic template where we are going to render bingo play */
         let doc = new DOMParser().parseFromString(`
             <div class="gameLayout">
@@ -90,9 +95,9 @@ const app = (() => {
         /* Subscribe app to LINIA event. When this occurs
         we show up a modal with the player awarded and a gif animation 
         obviously we stop bingo playing until modal is closed 
-        */        
+        */
         pubSub.subscribe("LINIA", (player) => {
-            debug("Linia");            
+            debug("Linia");
             /* Stop bingo playing */
             stop();
             /* As linia only could be awarded once per playing we delete that event
@@ -150,7 +155,7 @@ const app = (() => {
     /* Return start and stop function and play speed */
     return {
         start: start,
-        playOffline:playOffline,
+        playOffline: playOffline,
         toggle: () => {
             (stateApp == "run") ? stop() : start();
         },

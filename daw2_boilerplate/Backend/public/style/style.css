@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    font: 13px Helvetica, Arial;
+ }
+
+ .formChat {
+    background: #000;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+ input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: 0.5%;
+ }
+
+ button {
+    width: 9%;
+    background: rgb(130, 224, 255);
+    border: none;
+    padding: 10px;
+ }
+
+ /* CHAT MESSAGES */
+
+ #chatMessages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+ }
+
+ #chatMessages li {
+    padding: 5px 10px;
+ }
+
+ #chatMessages li:nth-child(odd) {
+    background: #eee;
+ }
+
+ #send{
+    background-color: red; 
+    text-align: center;  
+    margin: auto  ; 
+    width: 50%; 
+    padding: 10px; 
+    margin-left: 450px;
+ }
+
+
+
+/* Bingo cards */
+/* #cards {
+   display: none;
+   width: 30%;
+   height: 660px;
+   float: right;
+   border: 2px solid blacK;
+}
+
+#bingoCards{
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   width:80%;
+   margin:auto;
+}
+
+#bingoCards div{
+ margin-top: 20px;
+}
+
+table.bingoCard {
+   text-align: center;
+   border: 5px solid black;
+   border-radius:25px;
+   -moz-border-radius:25px;
+   font-size: 32px;
+}
+
+th.extracted{
+   background-color:green;
+   color:white;
+}
+
+.nulo{
+   background-color: gray;
+} */

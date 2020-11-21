@@ -152,9 +152,9 @@ export const modalPlayers = () => {
 
         let menuGame = document.getElementById('menuGame');
         menuGame.onclick = function () {
-            console.log('MENU BTN')
-            let m = document.getElementById('playersForm');
-            m.style.display = "none";
+            console.log('MENU BTN');
+            let players = document.getElementById('playersForm');
+            players.style.display = "none";
             div_bg.remove();
             showModal(GameMenu());
 
@@ -172,6 +172,7 @@ export const modalPlayers = () => {
                 let m = document.getElementById('playersForm');
                 m.style.display = "none";
                 div_bg.remove();
+                document.getElementById('menu_principal').remove();
                 app.speed = (parseFloat(inputVal.value) * 1000); //SET GAME SPEED
                 app.start();
             } else {
