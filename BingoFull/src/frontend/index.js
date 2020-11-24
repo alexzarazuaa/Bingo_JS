@@ -9,8 +9,19 @@ import { PubSub } from './js/core/pubSub.js';
 import { modalPlayers, setupAudioBingoWin } from './templates/modalPlayers.js';
 import { modalLiniaBingo } from './templates/modalLiniaBingo.js';
 import { GameMenu } from './templates/modalGameMenu.js';
-import { MenuOnline } from './templates/modalMenuOnline.js'
+import { MenuOnline,RoomsList } from './templates/modalOnline.js';
+import { Play_online } from './js/RendersOnline/Online.js';
 import io from 'socket.io-client';
+
+
+
+/**
+ * OJO POSIBLE EXAMEN
+ * que la ultima bola parpade tambien en los cartones
+ * PER A QE fer el css themable
+ */
+
+
 /**
  * Within the app constant(closure), we have defined several variables with anonymous functions which are responsible for starting and stopping the game
  * As for the start variable, it is where we have the subscription patterns, 
@@ -26,27 +37,30 @@ const app = (() => {
     let players = []
     let pubSub = new PubSub();
     let stateApp = "stop";
-    debugger
-    const socket = io('ws://localhost:8080', {transports: ['websocket']});
-    socket.on('connect', () => {
-        socket.emit('join', `POPO`);
-        console.log("EMIT")
-    });
 
     /**
      * Starts offline bingo
      */
 
     let playOffline = () => {
-        showModal(modalPlayers(), app.start);
+        showModal(modalPlayers(),start);
     }
 
     /**
      * Starts online  bingo
      */
     let playOnline = () =>{
-      showModal(MenuOnline(),app.start_online)
+      showModal(MenuOnline())
     }
+    let Game_online = (nickname) =>{
+        const socket = io('ws://localhost:8080', {transports: ['websocket']});
+        socket.on('connect', () => {
+            socket.emit('join', nickname);
+        });
+        showModal(RoomsList(socket));
+        console.log("START ONLINE!")
+    }
+    
 
     /* Every time runs pick a ball from bombo bingo game */
     let getBallFromBombo = () => {
@@ -161,6 +175,7 @@ const app = (() => {
         start: start,
         playOffline: playOffline,
         playOnline:playOnline,
+        Game_online:Game_online,
         toggle: () => {
             (stateApp == "run") ? stop() : start();
         },

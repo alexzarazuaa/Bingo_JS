@@ -53,7 +53,7 @@ export const modalPlayers = () => {
         clearModal("gameLayout") //clear the game
 
         // Draw the players in localStorage. Each time you add or delete a player, this function is called.
-        function renderPlayerList() {
+         function renderPlayerList() {
             playersNames = JSON.parse(localStorage.getItem('playersNames')) || [];
             let uList = document.getElementById("listPlayers");
             // Delete all palyers before drawing them again

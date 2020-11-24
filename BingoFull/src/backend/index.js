@@ -39,11 +39,13 @@ function index() {
             * should not ve shared
             */
             socket.on('joined_game', function (infoPlayer) {
+                let all_players = [];
+                let all;
                 let messagesDiv = document.getElementById("chatMessages");
-                player = JSON.parse(infoPlayer)
-                console.log('PLAYER INFO', player)
-                player.nickname = nickname;
-                messagesDiv.innerHTML = "<li style='background-color: red'>" + JSON.stringify(infoPlayer) + "</li>" + messagesDiv.innerHTML;
+                all = JSON.parse(infoPlayer)
+                //INFO TO ALL USERS THAT HOW MANY PLAYERS ARE IN TOTAL IN THE MATCH
+                all.players.forEach(m => all_players.push(m.username));
+                messagesDiv.innerHTML = "<li><b>MATCH PLAYERS:</b> " + all_players + "</li>" + messagesDiv.innerHTML;
             });
             //Event notifying starts the game
             socket.on('starts_game', function (msg) {
