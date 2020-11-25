@@ -4,7 +4,7 @@ const PubSub = require('./core/pubSub.js');
 
 const gameController = () => {    
     let currentGame=new Map();    
-    const secsUntilBegin = 1;
+    const secsUntilBegin = 5;
     const maxUsers = 3;
     let countDown;
     

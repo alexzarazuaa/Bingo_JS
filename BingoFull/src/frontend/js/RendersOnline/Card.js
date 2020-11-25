@@ -1,6 +1,6 @@
 export let  BingoCardOnline= () => {
 
-    let renderCardOnlie = (username,card,divRoot,extractedBalls=[]) => {
+    let renderCardOnlie = (username,card,divRoot,extractedBalls=[],) => {
         console.log(card)
 
         divRoot = document.getElementById(divRoot)
