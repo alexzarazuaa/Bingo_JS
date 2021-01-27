@@ -1,12 +1,10 @@
-# Bingo Twingo APP |  ALEX ZARAZUA
+# Bingo Twingo APP   ALEX ZARAZUA
 
-**INDEX**
-
-
+## INDEX
 
   * Bingo Twingo APP
   * Tecnologías Implicadas :
-    * Javascript RAW ES6
+    * Javascript ES6
     * NodeJs
     * Express
     * Websockets:
@@ -16,6 +14,8 @@
     * Jest
     * ESLint
   * Proceso de Desarrollo
+
+
 
 # Bingo Twingo APP
 
@@ -28,7 +28,7 @@
     _**En backend _lado del servidor_ usamos nodejs + express + socket.io**_
 
 
-# Javascript RAW ES6
+# Javascript ES6
 
 ## JavaScript
 
@@ -72,3 +72,45 @@
     *  Integración con motores de renderización de _'vistas'_ para generar respuestas mediante la introducción de datos en plantillas.
     *  Establecer ajustes de aplicaciones web como qué puerto usar para conectar, y la localización de las plantillas que se utilizan para renderizar   la respuesta.
     *   Añadir procesamiento de peticiones _'middleware'_ adicional en cualquier punto dentro de la tubería de manejo de la petición.
+
+
+## WebSockets
+
+* **WebSocket** es un protocolo de red basado en TCP que establece cómo deben intercambiarse datos entre redes. Puesto que es un protocolo fiable y eficiente, es utilizado por prácticamente todos los clientes. El protocolo TCP establece conexiones entre dos puntos finales de comunicación, llamados sockets. De esta manera, el intercambio de datos puede producirse en las dos direcciones.
+* Se utiliza **WebSocket** siempre que se trate de establecer conexiones de forma rápida. Es el caso, por ejemplo, de los chats de asistencia técnica, de los tickers de noticias o de actualizaciones de bolsa en directo, de los servicios de mensajería instantánea y de los juegos en tiempo real.
+
+## Socket.io
+
+* **Socket.io** es una librería en JavaScript para Node.js que permite una comunicación bidireccional en tiempo real entre cliente y servidor. Para ello se basa principalmente en Websocket pero también puede usar otras alternativas como sockets de Adobe Flash, JSONP polling o long polling en AJAX, seleccionando la mejor alternativa para el cliente justo en tiempo de ejecución.
+
+* _Es importante resaltar que las aplicaciones hechas en Socket.io tiene una desventaja y es que no soportan interacciones con otros clientes que usen Websocket estándar. Esto se debe a que Socket.io no es una implementación del protocolo Websocket sino una librería de comunicación web en tiempo real que utiliza varios protocolos._
+
+## WebPack
+
+* **WebPack** es básicamente un empaquetador de módulos o module bundler, pero gracias a un de sus componentes, los plugins, puede hacer las veces de tasks runner, es decir podemos hacer tareas de todo tipo, como mover directorios, hacer clean up, etc.
+* Además , **Webpack** se define como un empaquetador de módulos.
+
+* _En la actualidad es utilizado por miles de proyectos de desarrollo web Front-End: desde frameworks como React o Angular hasta en el desarrollo de aplicaciones tan conocidas como Twitter, Instagram, PayPal o la versión web de Whatsapp._
+
+* También podemos definir **WebPack**,como una herramienta de compilación  que coloca en un grafo de dependencias a todos los elementos que forman parte de tu proyecto de desarrollo: código JavaScript, HTML, CSS, plantillas, imágenes, fuentes... Esta idea central es la que lo convierte en una herramienta tan poderosa.
+
+##  GitHub Actions
+
+* **GitHub Actions** permite crear flujos de trabajo **_workflows_** que se pueden utilizar para compilar, probar y desplegar código, dando la posibilidad de crear flujos de integración y despliegue continuo dentro del propio repositorio de git.
+* Los flujos de trabajo tienen que contener al menos un _job_. Estos incluyen una serie de pasos que ejecutan tareas individuales que pueden ser acciones o comandos. Un flujo de trabajo puede comenzar por distintos eventos que suceden dentro de GitHub, como un _push_ al repositorio o un _pull_ request.
+
+# Jest 
+
+* **Jest** ha sido desarrollado por el equipo de Facebook y, aunque nace en el contexto de React, es un framework de testing generalista que podemos utilizar en cualquier situación.
+* Con él que podemos construir tests unitarios trabajando con matchers personalizados, crear mocks o comprobar snapshots de componentes visuales como algo sencillo y accesible.
+
+# ESLint
+
+* Los linters son herramientas de programación que examinan el código del programador y lo ayudan a corregir errores de sintaxis, código incorrecto, malas prácticas o costumbres o incluso ayudarlo a seguir guías de estilo, favoreciendo escribir código de calidad y acostumbrando al usuario a solventar ciertos problemas comunes como programador.
+
+*  **ESLint** es un linter que examina código Javascript, siguiendo unas ciertas normas y criterios personalizables por el programador, para que el código Javascript siga ciertos estándares y estilos, favoreciendo la escritura de código de calidad.
+* **ESLint** es totalmente configurable y puedes indicarle que criterios _llamados reglas_ quieres que utilice y cuales prefieres que ignore, adaptándose a las necesidades de cualquier empresa, programador o equipo de trabajo.
+
+
+# Proceso de Desarrollo
+
