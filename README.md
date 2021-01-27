@@ -28,9 +28,8 @@
     _**En backend _lado del servidor_ usamos nodejs + express + socket.io**_
 
 
-# Javascript ES6
+## Javascript ES6
 
-## JavaScript
 
 * **JavaScript** es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web.
 * Cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado.
@@ -99,12 +98,12 @@
 * **GitHub Actions** permite crear flujos de trabajo **_workflows_** que se pueden utilizar para compilar, probar y desplegar código, dando la posibilidad de crear flujos de integración y despliegue continuo dentro del propio repositorio de git.
 * Los flujos de trabajo tienen que contener al menos un _job_. Estos incluyen una serie de pasos que ejecutan tareas individuales que pueden ser acciones o comandos. Un flujo de trabajo puede comenzar por distintos eventos que suceden dentro de GitHub, como un _push_ al repositorio o un _pull_ request.
 
-# Jest 
+## Jest 
 
 * **Jest** ha sido desarrollado por el equipo de Facebook y, aunque nace en el contexto de React, es un framework de testing generalista que podemos utilizar en cualquier situación.
 * Con él que podemos construir tests unitarios trabajando con matchers personalizados, crear mocks o comprobar snapshots de componentes visuales como algo sencillo y accesible.
 
-# ESLint
+## ESLint
 
 * Los linters son herramientas de programación que examinan el código del programador y lo ayudan a corregir errores de sintaxis, código incorrecto, malas prácticas o costumbres o incluso ayudarlo a seguir guías de estilo, favoreciendo escribir código de calidad y acostumbrando al usuario a solventar ciertos problemas comunes como programador.
 
