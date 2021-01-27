@@ -3,7 +3,7 @@
 
 ## INDEX
 
-  * Bingo Twingo APP
+  * Bingo Twingo App
   * Tecnologías Implicadas :
     * Javascript ES6
     * NodeJs
@@ -18,7 +18,7 @@
 
 
 
-# Bingo Twingo APP
+# Bingo Twingo App
 
  * Bingo twingo es un proyecto de desarrollo de aplicaciones web en modo offline y online _**usando websockets con socket.io**_ que consiste en un juego de bingo online tradicional para jugar sin conexión a internet o online con otros jugadores remotos.
 
@@ -28,6 +28,7 @@
 
     _**En backend _lado del servidor_ usamos nodejs + express + socket.io**_
 
+# Tecnologías Implicadas
 
 ## Javascript ES6
 
@@ -114,3 +115,8 @@
 
 # Proceso de Desarrollo
 
+Esta práctica consistirá en aplicar una serie de mejoras sobre el proyecto de BingoTwingo , que consistirá en configurar un nuevo workflow dentro del proyecto denominado Bingo_Workflow. 
+Dicho workflow sólo se ejecutará cuando se realice un push en la rama creada.
+
+En primer lugar, el primer job que crearemos será el de verificación de sintaxis correcta que  se encargará de realizar la descarga del proyecto y de
+verificar que la sintáxis utilizada és correcta en los ficheros javascript, para ello haremos lo siguiente : 
