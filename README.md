@@ -1,4 +1,5 @@
-# Bingo Twingo APP   ALEX ZARAZUA
+
+  <h1 align="center"><strong>Bingo Twingo App</strong></h1>
 
 ## INDEX
 
