@@ -14,6 +14,6 @@ jobs:
      env:
       DEFAULT_BRANCH: “githubActions_improvement”
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      LINTER_RULES_PATH: ./bingo_twingo/src
+      LINTER_RULES_PATH: ./bingo_twingo/src/
       JAVASCRIPT_ES_CONFIG_FILE: ./bingo_twingo/.eslintrc.json
       VALIDATE_JAVASCRIPT_ES: true
