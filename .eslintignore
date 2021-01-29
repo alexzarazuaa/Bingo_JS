@@ -5,5 +5,8 @@ bingo_twingo/webpack.prod.config.js
 bingo_twingo/webpack.server.config.js
 bingo_twingo/.eslintrc.js
 bingo_twingo/.babelrc
-
+bingo_twingo/src/frontend/js/out
+bingo_twingo/src/frontend/js/test
+bingo_twingo/src/frontend/project_documentation
+bingo_twingo/src/frontend/templates/project_documentation
 *.test.js
