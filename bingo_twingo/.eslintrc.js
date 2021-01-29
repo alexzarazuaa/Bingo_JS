@@ -1,3 +1,4 @@
+
 module.exports = {
   "extends": [
     "eslint:recommended",
@@ -15,4 +16,3 @@ module.exports = {
     "jasmine": true
   },
 };
-

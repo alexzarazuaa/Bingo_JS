@@ -3,6 +3,7 @@ bingo_twingo/__mocks__/styleMock.js
 bingo_twingo/webpack.dev.config.js
 bingo_twingo/webpack.prod.config.js
 bingo_twingo/webpack.server.config.js
-bingo_twingo/.eslintrc.json
 bingo_twingo/.eslintrc.js
 bingo_twingo/.babelrc
+
+*.test.js
