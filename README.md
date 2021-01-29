@@ -120,3 +120,30 @@ Dicho workflow sólo se ejecutará cuando se realice un push en la rama creada.
 
 En primer lugar, el primer job que crearemos será el de verificación de sintaxis correcta que  se encargará de realizar la descarga del proyecto y de
 verificar que la sintáxis utilizada és correcta en los ficheros javascript, para ello haremos lo siguiente : 
+
+  * Primero en el codigo del bingo que ya teniamos, añadimos la pertinente carpeta .github, y dentro de esta la de workflows, donde estará ubicado el workflow con los jobs y steps pertinentes para dicha práctica.
+  * Además para este job en concreto, en el cual utilizamos el **Eslint** he utilizado los archivos .eslintignore y .eslintrc.js.
+
+  * .eslitignore
+    * <img src="./images/eslintignore.png">
+  * .eslintrc.js
+    * <img src="./images/eslintrc.png"/>
+
+  * Y ya pasando al workflow quedaría de esta manera : 
+
+      * <img src="./images/workflow_lint.png"/>
+  
+Como podeis observar en el workflow, el job se ejecutará al realizar un push en el rama,por lo tanto al hacer el push, nos dirigimos a github al repositorio y al apartado de actions y hay podremos comprobar como ha ido todo bien : 
+
+<img src="./images/action_jobLint.png"/>
+
+
+<img src="./images/action_job1.png"/>
+
+Y de esta manera el job , en primer lugar habrá descargado y el proyecto y en segundo y último habrá verificado que la sintáxis utilizada en la correcta.
+
+Pasamos al segundo job , en el cual nos pide que un job se encarge de ejecutar y verificar los test que tenemos en el bingo, bien seguiremos estos pasos : 
+
+* 
+
+
