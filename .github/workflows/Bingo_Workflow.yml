@@ -24,4 +24,6 @@ jobs:
     - name: "Checkout code"
       uses: actions/checkout@v2
     - name: testing bingo test
+      with:
+        jestArgs: bingo_twingo/src/frontend/js/test/*
       run:  npm test
