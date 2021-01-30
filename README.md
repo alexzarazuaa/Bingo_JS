@@ -157,3 +157,7 @@ Pasamos al segundo job , en el cual nos pide que un job se encarge de ejecutar y
 
 ### _Los archivos de los test los podeis encontrar en el respositorio [aqui](https://github.com/alexzarazuaa/Bingo_JS/tree/%E2%80%9CgithubActions_improvement%E2%80%9D/src/frontend/js/test)_
 
+
+### Pasamos al Job de generación de estáticos.
+
+* 
