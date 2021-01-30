@@ -1,13 +1,12 @@
 
-webpack.server.config.js
-webpack.prod.config.js
-webpack.dev.config.js
-.babelrc
-__mocks__/*
+./webpack.server.config.js
+./webpack.prod.config.js
+./webpack.dev.config.js
+./__mocks__/*
 .eslintrc.js
 .babelrc
-src/frontend/js/out
-src/frontend/js/test
-src/frontend/project_documentation
-src/frontend/project_documentation
+./src/frontend/js/out
+./src/frontend/js/test
+./src/frontend/project_documentation
+./src/frontend/project_documentation
 *.test.js
