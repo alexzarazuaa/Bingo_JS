@@ -160,4 +160,31 @@ Pasamos al segundo job , en el cual nos pide que un job se encarge de ejecutar y
 
 ### Pasamos al Job de generación de estáticos.
 
-* 
+* Donde se nos pedía que el job realizara el proceso de compilado del proyecto y además  siempre y cuando hayan terminado los 2 jobs anteriores  y depositará los artefactos generados en la ruta build del projecto.
+
+* _Los artifacts permiten compartir datos entre trabajos en un flujo de trabajo y almacenar datos una vez que ese flujo de trabajo se ha completado._
+
+Lo que hize para esta parte , unicamente fue crear el job con el nombre que nos especifícan,además del step necesario con las siguientes actions : 
+
+  * La primera que se encarga de comprobar el codigo
+  * La segunda la cual realiza el build de la aplicación
+  * Y la tercera que crea el artifact y lo deposita en la carpeta dist
+
+_Sin olvidar el needs con los dos jobs anteriores que nos permitirá realizar este job siempre y cuando los anteriores se hayan ejecutado correctamente._
+
+El job quedaria asi :
+
+ <img src="./images/job_build.png"/>
+
+Como pasa en los anteriores se ejecuta al hacer un push en la rama , por lo tanto al hacer el push nos dirigimos a gihtub y comprobamos que los tres se hayan ejecutado correctamente :
+
+* <img src="./images/exec_run_artifact.png"/>
+
+* <img src="./images/exec_job_arti.png"/>
+
+
+* <img src="./images/artifact_build.png"/>
+
+
+### Job de despliegue de los estáticos generados. 
+
