@@ -144,6 +144,17 @@ Y de esta manera el job , en primer lugar habrá descargado y el proyecto y en s
 
 Pasamos al segundo job , en el cual nos pide que un job se encarge de ejecutar y verificar los test que tenemos en el bingo, bien seguiremos estos pasos : 
 
-* 
+* Como ya teniamos los test y las dependencias del jest en el proyecto del bingo, solo tuve que eliminar el directorio bingo_twingo donde tenia el bingo , y pasar todos los archivos de ese directori al dorectorio raiz para que el job pudiese ejecutar los test que previamente yo proba con el comando : `npm run test`.
+* Además inclui en el .eslintignore las carpetas de la documentacion más algunas que no tiene que revisar la sintáxis.
+* Seguidamente ya solo tuve que añadir el correspodiente job al workflow y realizar el git add . , git commit y el git push.
+* Asi quedaría el workflow :
+
+  * <img src="./images/flow_jest_test.png"/>
+* Y comprobamos que haya ido todo bien el github : 
+
+  * <img src="./images/ex_jest_bingo.png"/>
+  * <img src="./images/ext_jest_2.png"/>
+
+### _Los archivos de los test los podeis encontrar en el respositorio aqui : https://github.com/alexzarazuaa/Bingo_JS/tree/%E2%80%9CgithubActions_improvement%E2%80%9D/src/frontend/js/test_
 
 
