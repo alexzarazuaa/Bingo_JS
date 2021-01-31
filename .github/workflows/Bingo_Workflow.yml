@@ -56,7 +56,7 @@ jobs:
     - name: deploying  on surge
       uses: dswistowski/surge-sh-action@v1
       with:
-        domain: .surge.sh
+        domain: alexzarazua88.surge.sh
         project: .
         token: ${{secrets.LOGIN_SURGE }}
         login: ${{secrets.TOKEN_SURGE }}
