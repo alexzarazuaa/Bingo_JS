@@ -188,3 +188,35 @@ Como pasa en los anteriores se ejecuta al hacer un push en la rama , por lo tant
 
 ### Job de despliegue de los estáticos generados. 
 
+Se nos pedia que  partiendo de los estáticos generados en el job anterior  desplegará el proyecto en surge.sh.
+
+Para empezar  instalaremos la extensión de surge en el proyecto :  ` npm install -g surge '.
+
+Luego nos dirigiremos a la carpeta dist desde el terminal y escrbiremos el comando ` surge ` , seguidamente si aun no lo hemos hecho nunca nos pedirá un correo, una contraseña y un nombre de dominio, en mi caso como ya lo hice para una practica anterior, el correo ya me salia , solo tuve que crear un nombre de dominio al cual puse : 'alexzarazua88.surge.sh'
+
+  * <img src="./images/surge_part1.png">
+
+Además cree los correspondientes secrets de los token de surge en github,hacen falta dos tokens el surge login y el token de surge ,para saber el token simplemte con el comando ` sudo surge toke ` , nos mostrará por el teminal el nuestro surge token, y para el token de login será el correo que habremos configurado anteriormente en surge.
+
+Nos dirigimos a github, y en settings en la barra lateral de la izquierda casi por el finla hay un apartado de secrets, entramos y habrá una pestaña de crear un nuevo secret, en referencia al del login, el nombre ponemos el que querramos y el valor será el correo, y con el token de surge lo mismo el nombre que creamos conveniente y como valor el token que nos mostró por termoinal al realizar el comando _sudo surge token_.
+
+* <img src="./images/pest_secrets.png">
+
+* <img src="./images/new_secret.png">
+
+* <img src="./images/tokens_surge.png">
+
+Una vez realizados estos pasos, procedemos ha realizar el correspodiente job en nuestro workflow,el cual estará compuesto por variso steps, uno para descargar el proyecto con la ayuda del artifact,y otro que hará el deploy del projecto en surge, además de los secrets creados en github:
+
+* <img src="./images/deploy_job.png">
+
+Para comprobar que todo ha ido bien, primero nos dirigimos a github para ver que el qorkflow se ha ejectuado correctamente y luego abrirmos una nueva pestaña en el navegador, escribimos nuestro dominio de surge y comprobarmos que se nos abre el proyecto:
+
+* <img src="./images/deploy_run.png">
+
+* <img src="./images/run_work_deploy.png">
+
+* <img src="./images/artifact_deploy.png">
+
+* <img src="./images/surge_running.png">
+
