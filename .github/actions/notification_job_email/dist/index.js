@@ -1,11 +1,11 @@
 module.exports =
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 1913:
 /***/ ((module) => {
 
+"use strict";
 module.exports = JSON.parse("{\"126\":{\"host\":\"smtp.126.com\",\"port\":465,\"secure\":true},\"163\":{\"host\":\"smtp.163.com\",\"port\":465,\"secure\":true},\"1und1\":{\"host\":\"smtp.1und1.de\",\"port\":465,\"secure\":true,\"authMethod\":\"LOGIN\"},\"AOL\":{\"domains\":[\"aol.com\"],\"host\":\"smtp.aol.com\",\"port\":587},\"DebugMail\":{\"host\":\"debugmail.io\",\"port\":25},\"DynectEmail\":{\"aliases\":[\"Dynect\"],\"host\":\"smtp.dynect.net\",\"port\":25},\"Ethereal\":{\"aliases\":[\"ethereal.email\"],\"host\":\"smtp.ethereal.email\",\"port\":587},\"FastMail\":{\"domains\":[\"fastmail.fm\"],\"host\":\"smtp.fastmail.com\",\"port\":465,\"secure\":true},\"GandiMail\":{\"aliases\":[\"Gandi\",\"Gandi Mail\"],\"host\":\"mail.gandi.net\",\"port\":587},\"Gmail\":{\"aliases\":[\"Google Mail\"],\"domains\":[\"gmail.com\",\"googlemail.com\"],\"host\":\"smtp.gmail.com\",\"port\":465,\"secure\":true},\"Godaddy\":{\"host\":\"smtpout.secureserver.net\",\"port\":25},\"GodaddyAsia\":{\"host\":\"smtp.asia.secureserver.net\",\"port\":25},\"GodaddyEurope\":{\"host\":\"smtp.europe.secureserver.net\",\"port\":25},\"hot.ee\":{\"host\":\"mail.hot.ee\"},\"Hotmail\":{\"aliases\":[\"Outlook\",\"Outlook.com\",\"Hotmail.com\"],\"domains\":[\"hotmail.com\",\"outlook.com\"],\"host\":\"smtp.live.com\",\"port\":587},\"iCloud\":{\"aliases\":[\"Me\",\"Mac\"],\"domains\":[\"me.com\",\"mac.com\"],\"host\":\"smtp.mail.me.com\",\"port\":587},\"mail.ee\":{\"host\":\"smtp.mail.ee\"},\"Mail.ru\":{\"host\":\"smtp.mail.ru\",\"port\":465,\"secure\":true},\"Maildev\":{\"port\":1025,\"ignoreTLS\":true},\"Mailgun\":{\"host\":\"smtp.mailgun.org\",\"port\":465,\"secure\":true},\"Mailjet\":{\"host\":\"in.mailjet.com\",\"port\":587},\"Mailosaur\":{\"host\":\"mailosaur.io\",\"port\":25},\"Mailtrap\":{\"host\":\"smtp.mailtrap.io\",\"port\":2525},\"Mandrill\":{\"host\":\"smtp.mandrillapp.com\",\"port\":587},\"Naver\":{\"host\":\"smtp.naver.com\",\"port\":587},\"One\":{\"host\":\"send.one.com\",\"port\":465,\"secure\":true},\"OpenMailBox\":{\"aliases\":[\"OMB\",\"openmailbox.org\"],\"host\":\"smtp.openmailbox.org\",\"port\":465,\"secure\":true},\"Outlook365\":{\"host\":\"smtp.office365.com\",\"port\":587,\"secure\":false},\"Postmark\":{\"aliases\":[\"PostmarkApp\"],\"host\":\"smtp.postmarkapp.com\",\"port\":2525},\"qiye.aliyun\":{\"host\":\"smtp.mxhichina.com\",\"port\":\"465\",\"secure\":true},\"QQ\":{\"domains\":[\"qq.com\"],\"host\":\"smtp.qq.com\",\"port\":465,\"secure\":true},\"QQex\":{\"aliases\":[\"QQ Enterprise\"],\"domains\":[\"exmail.qq.com\"],\"host\":\"smtp.exmail.qq.com\",\"port\":465,\"secure\":true},\"SendCloud\":{\"host\":\"smtpcloud.sohu.com\",\"port\":25},\"SendGrid\":{\"host\":\"smtp.sendgrid.net\",\"port\":587},\"SendinBlue\":{\"host\":\"smtp-relay.sendinblue.com\",\"port\":587},\"SendPulse\":{\"host\":\"smtp-pulse.com\",\"port\":465,\"secure\":true},\"SES\":{\"host\":\"email-smtp.us-east-1.amazonaws.com\",\"port\":465,\"secure\":true},\"SES-US-EAST-1\":{\"host\":\"email-smtp.us-east-1.amazonaws.com\",\"port\":465,\"secure\":true},\"SES-US-WEST-2\":{\"host\":\"email-smtp.us-west-2.amazonaws.com\",\"port\":465,\"secure\":true},\"SES-EU-WEST-1\":{\"host\":\"email-smtp.eu-west-1.amazonaws.com\",\"port\":465,\"secure\":true},\"Sparkpost\":{\"aliases\":[\"SparkPost\",\"SparkPost Mail\"],\"domains\":[\"sparkpost.com\"],\"host\":\"smtp.sparkpostmail.com\",\"port\":587,\"secure\":false},\"Tipimail\":{\"host\":\"smtp.tipimail.com\",\"port\":587},\"Yahoo\":{\"domains\":[\"yahoo.com\"],\"host\":\"smtp.mail.yahoo.com\",\"port\":465,\"secure\":true},\"Yandex\":{\"domains\":[\"yandex.ru\"],\"host\":\"smtp.yandex.ru\",\"port\":465,\"secure\":true},\"Zoho\":{\"host\":\"smtp.zoho.com\",\"port\":465,\"secure\":true,\"authMethod\":\"LOGIN\"}}");
 
 /***/ }),
@@ -13,6 +13,7 @@ module.exports = JSON.parse("{\"126\":{\"host\":\"smtp.126.com\",\"port\":465,\"
 /***/ 7643:
 /***/ ((module) => {
 
+"use strict";
 module.exports = JSON.parse("{\"_args\":[[\"nodemailer@6.4.17\",\"/home/usuario/Documentos/2nDaw/Client/bingo_twingo/.github/actions/notification_job_email\"]],\"_from\":\"nodemailer@6.4.17\",\"_id\":\"nodemailer@6.4.17\",\"_inBundle\":false,\"_integrity\":\"sha512-89ps+SBGpo0D4Bi5ZrxcrCiRFaMmkCt+gItMXQGzEtZVR3uAD3QAQIDoxTWnx3ky0Dwwy/dhFrQ+6NNGXpw/qQ==\",\"_location\":\"/nodemailer\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"nodemailer@6.4.17\",\"name\":\"nodemailer\",\"escapedName\":\"nodemailer\",\"rawSpec\":\"6.4.17\",\"saveSpec\":null,\"fetchSpec\":\"6.4.17\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/nodemailer/-/nodemailer-6.4.17.tgz\",\"_spec\":\"6.4.17\",\"_where\":\"/home/usuario/Documentos/2nDaw/Client/bingo_twingo/.github/actions/notification_job_email\",\"author\":{\"name\":\"Andris Reinman\"},\"bugs\":{\"url\":\"https://github.com/nodemailer/nodemailer/issues\"},\"dependencies\":{},\"description\":\"Easy as cake e-mail sending from your Node.js applications\",\"devDependencies\":{\"bunyan\":\"1.8.14\",\"chai\":\"4.2.0\",\"eslint-config-nodemailer\":\"1.2.0\",\"eslint-config-prettier\":\"7.0.0\",\"grunt\":\"1.3.0\",\"grunt-cli\":\"1.3.2\",\"grunt-eslint\":\"23.0.0\",\"grunt-mocha-test\":\"0.13.3\",\"libbase64\":\"1.2.1\",\"libmime\":\"5.0.0\",\"libqp\":\"1.1.0\",\"mocha\":\"8.2.1\",\"nodemailer-ntlm-auth\":\"1.0.1\",\"proxy\":\"1.0.2\",\"proxy-test-server\":\"1.0.0\",\"sinon\":\"9.2.1\",\"smtp-server\":\"3.8.0\"},\"engines\":{\"node\":\">=6.0.0\"},\"homepage\":\"https://nodemailer.com/\",\"keywords\":[\"Nodemailer\"],\"license\":\"MIT\",\"main\":\"lib/nodemailer.js\",\"name\":\"nodemailer\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/nodemailer/nodemailer.git\"},\"scripts\":{\"test\":\"grunt\"},\"version\":\"6.4.17\"}");
 
 /***/ }),
@@ -21,34 +22,68 @@ module.exports = JSON.parse("{\"_args\":[[\"nodemailer@6.4.17\",\"/home/usuario/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
-const nodemailer = __nccwpck_require__(7170);
-const core = __nccwpck_require__(6066);
+let nodemailer = __nccwpck_require__(7170);
+let core = __nccwpck_require__(6066);
 
 
+let jobs = [
+    core.getInput("JOB1__syntax_check_job"),
+    core.getInput("JOB2__test_execution_job"),
+    core.getInput("JOB3__build_statics_job"),
+    core.getInput("JOB4__deploy_job")
+]
 
-  // create reusable transporter object using the default SMTP transport
-  var transporter = nodemailer.createTransport({
+console.log(jobs);
+console.log(jobs[0])
+console.log(jobs[1])
+console.log(jobs[2])
+console.log(jobs[3])
+
+
+// create reusable transporter object using the default SMTP transport
+var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'alexzarazua7email.test@gmail.com',
-      pass: core.getInput('NODE_EMAIL_PASSWORD')
+        user: 'alexzarazua7email.test@gmail.com',
+        pass: core.getInput('NODE_EMAIL_PASSWORD')
     }
-  });
-  
+});
 
-  // send mail with defined transport object
-  let info = transporter.sendMail({
+function check(jobs) {
+    if (jobs == "") {
+        jobs = "skipped";
+    }
+    return jobs;
+}
+
+
+
+// send mail with defined transport object
+let info = {
     from: 'alexzarazua7email.test@gmail.com',// sender address
     to: core.getInput('WORK_CLASS_EMAIL'), // list of receivers
     subject: "Resultado del workflow ejecutado ✔", // Subject line
-    text: "Se ha realizado un push en la rama githubActions_improvement que ha provocado la ejecución del workflow Bingo_Workflow con los siguientes resultados:\n\n- syntax_check_job: JOB 1\n\n- test_execution_job: JOB 2\n\n - build_statics_job: JOB 3\n\n - deploy_job: JOB 4", // plain text body
+    text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
+    con los siguientes resultados: \n\n\n
+    - syntax_check_job: ${check(jobs[0])}
+    - test_execution_job: ${check(jobs[1])}
+    - build_statics_job:  ${check(jobs[2])}
+    - deploy_job: ${check(jobs[3])}`       //  text body
 
-  });
 
-  console.log("Message sent: %s", info.messageId);
- 
-  // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+}
+
+console.log("Message sent: ", info.text,jobs[0]);
+
+transporter.sendMail(info, function (error, data) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("Resultado del workflow ejecutado ✔",data.response);
+
+    }
+});
+
 
 
 
@@ -57,6 +92,7 @@ const core = __nccwpck_require__(6066);
 /***/ 9366:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
+"use strict";
 
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
@@ -142,6 +178,7 @@ function escapeProperty(s) {
 /***/ 6066:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
+"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -386,6 +423,7 @@ exports.getState = getState;
 /***/ 5762:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
+"use strict";
 
 // For internal use, subject to change.
 var __importStar = (this && this.__importStar) || function (mod) {
@@ -421,6 +459,7 @@ exports.issueCommand = issueCommand;
 /***/ 9913:
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -446,6 +485,7 @@ exports.toCommandValue = toCommandValue;
 /***/ 7637:
 /***/ ((module) => {
 
+"use strict";
 
 
 /**
@@ -766,6 +806,7 @@ module.exports = addressparser;
 /***/ 1282:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Transform = __nccwpck_require__(2413).Transform;
@@ -915,6 +956,7 @@ module.exports = {
 /***/ 1271:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 // FIXME:
@@ -1173,6 +1215,7 @@ module.exports = DKIM;
 /***/ 3147:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Transform = __nccwpck_require__(2413).Transform;
@@ -1335,6 +1378,7 @@ module.exports = MessageParser;
 /***/ 7805:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 // streams through a message body and calculates relaxed body hash
@@ -1496,6 +1540,7 @@ module.exports = RelaxedBody;
 /***/ 3631:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const punycode = __nccwpck_require__(4213);
@@ -1620,6 +1665,7 @@ function relaxedHeaderLine(line) {
 /***/ 7191:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 // module to handle cookies
@@ -1908,6 +1954,7 @@ module.exports = Cookies;
 /***/ 3779:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const http = __nccwpck_require__(8605);
@@ -2184,6 +2231,7 @@ function fetch(url, options) {
 /***/ 3380:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const packageData = __nccwpck_require__(7643);
@@ -2273,6 +2321,7 @@ module.exports = JSONTransport;
 /***/ 4404:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 /* eslint no-undefined: 0 */
 
 
@@ -2829,6 +2878,7 @@ module.exports = MailComposer;
 /***/ 6146:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const EventEmitter = __nccwpck_require__(8614);
@@ -3259,6 +3309,7 @@ module.exports = Mail;
 /***/ 2017:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const shared = __nccwpck_require__(3090);
@@ -3581,6 +3632,7 @@ module.exports = MailMessage;
 /***/ 582:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 /* eslint no-control-regex:0 */
 
 
@@ -4207,6 +4259,7 @@ module.exports = {
 /***/ 7236:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 /* eslint quote-props: 0 */
 
 
@@ -6316,6 +6369,7 @@ module.exports = {
 /***/ 9299:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 /* eslint no-undefined: 0, prefer-spread: 0, no-control-regex: 0 */
 
 
@@ -7577,6 +7631,7 @@ module.exports = MimeNode;
 /***/ 5971:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Transform = __nccwpck_require__(2413).Transform;
@@ -7617,6 +7672,7 @@ module.exports = LastNewline;
 /***/ 7170:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Mailer = __nccwpck_require__(6146);
@@ -7767,6 +7823,7 @@ module.exports.getTestMessageUrl = function (info) {
 /***/ 8713:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Transform = __nccwpck_require__(2413).Transform;
@@ -7993,6 +8050,7 @@ module.exports = {
 /***/ 9998:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const spawn = __nccwpck_require__(3129).spawn;
@@ -8216,6 +8274,7 @@ module.exports = SendmailTransport;
 /***/ 2074:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const stream = __nccwpck_require__(2413);
@@ -8266,6 +8325,7 @@ module.exports = LeWindows;
 /***/ 4799:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const stream = __nccwpck_require__(2413);
@@ -8325,6 +8385,7 @@ module.exports = LeWindows;
 /***/ 2137:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const EventEmitter = __nccwpck_require__(8614);
@@ -8644,6 +8705,7 @@ module.exports = SESTransport;
 /***/ 3090:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 /* eslint no-console: 0 */
 
 
@@ -9153,6 +9215,7 @@ function createDefaultLogger(levels) {
 /***/ 4480:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const stream = __nccwpck_require__(2413);
@@ -9268,6 +9331,7 @@ module.exports = DataStream;
 /***/ 450:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 /**
@@ -9406,6 +9470,7 @@ module.exports = httpProxyClient;
 /***/ 8390:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const packageInfo = __nccwpck_require__(7643);
@@ -11160,6 +11225,7 @@ module.exports = SMTPConnection;
 /***/ 9692:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const EventEmitter = __nccwpck_require__(8614);
@@ -11808,6 +11874,7 @@ module.exports = SMTPPool;
 /***/ 9941:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const SMTPConnection = __nccwpck_require__(8390);
@@ -12068,6 +12135,7 @@ module.exports = PoolResource;
 /***/ 2365:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const EventEmitter = __nccwpck_require__(8614);
@@ -12483,6 +12551,7 @@ module.exports = SMTPTransport;
 /***/ 6794:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const packageData = __nccwpck_require__(7643);
@@ -12632,6 +12701,7 @@ module.exports = StreamTransport;
 /***/ 1243:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const services = __nccwpck_require__(1913);
@@ -12686,6 +12756,7 @@ module.exports = function (key) {
 /***/ 7443:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+"use strict";
 
 
 const Stream = __nccwpck_require__(2413).Stream;
@@ -13069,6 +13140,7 @@ module.exports = XOAuth2;
 /***/ 3129:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("child_process");;
 
 /***/ }),
@@ -13076,6 +13148,7 @@ module.exports = require("child_process");;
 /***/ 6417:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("crypto");;
 
 /***/ }),
@@ -13083,6 +13156,7 @@ module.exports = require("crypto");;
 /***/ 881:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("dns");;
 
 /***/ }),
@@ -13090,6 +13164,7 @@ module.exports = require("dns");;
 /***/ 8614:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("events");;
 
 /***/ }),
@@ -13097,6 +13172,7 @@ module.exports = require("events");;
 /***/ 5747:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("fs");;
 
 /***/ }),
@@ -13104,6 +13180,7 @@ module.exports = require("fs");;
 /***/ 8605:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("http");;
 
 /***/ }),
@@ -13111,6 +13188,7 @@ module.exports = require("http");;
 /***/ 7211:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("https");;
 
 /***/ }),
@@ -13118,6 +13196,7 @@ module.exports = require("https");;
 /***/ 1631:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("net");;
 
 /***/ }),
@@ -13125,6 +13204,7 @@ module.exports = require("net");;
 /***/ 2087:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("os");;
 
 /***/ }),
@@ -13132,6 +13212,7 @@ module.exports = require("os");;
 /***/ 5622:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("path");;
 
 /***/ }),
@@ -13139,6 +13220,7 @@ module.exports = require("path");;
 /***/ 4213:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("punycode");;
 
 /***/ }),
@@ -13146,6 +13228,7 @@ module.exports = require("punycode");;
 /***/ 2413:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("stream");;
 
 /***/ }),
@@ -13153,6 +13236,7 @@ module.exports = require("stream");;
 /***/ 4016:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("tls");;
 
 /***/ }),
@@ -13160,6 +13244,7 @@ module.exports = require("tls");;
 /***/ 8835:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("url");;
 
 /***/ }),
@@ -13167,6 +13252,7 @@ module.exports = require("url");;
 /***/ 1669:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("util");;
 
 /***/ }),
@@ -13174,6 +13260,7 @@ module.exports = require("util");;
 /***/ 8761:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("zlib");;
 
 /***/ })
