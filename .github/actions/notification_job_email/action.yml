@@ -7,16 +7,16 @@ inputs:
   THE_PASSWORD:
     description: "Node mail password"
     required: true
-  JOB1__syntax_check_job:
+  syntax_check_job:
     description: JOBS 1
     required: true
-  JOB2__test_execution_job:
+  test_execution_job:
     description: JOBS 2
     required: true
-  JOB3__build_statics_job:
+  build_statics_job:
     description: JOBS 3
     required: true
-  JOB4__deploy_job:
+  deploy_job:
     description: JOBS 4
     required: true
 

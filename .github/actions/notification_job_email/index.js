@@ -4,10 +4,10 @@ let core = require("@actions/core");
 
 
 let jobs = [
-    core.getInput("JOB1__syntax_check_job"),
-    core.getInput("JOB2__test_execution_job"),
-    core.getInput("JOB3__build_statics_job"),
-    core.getInput("JOB4__deploy_job")
+    core.getInput("syntax_check_job"),
+    core.getInput("test_execution_job"),
+    core.getInput("build_statics_job"),
+    core.getInput("deploy_job")
 ]
 
 console.log(jobs);
