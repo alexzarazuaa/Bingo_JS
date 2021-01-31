@@ -1,10 +1,10 @@
 name: "Usign The sender mail npm nodemailer"
 description: "Action for send the email"
 inputs:
-  WORK_CLASS_EMAIL:
+  NODE_EMAIL:
     description: "The Email"
     required: true
-  NODE_EMAIL_PASSWORD:
+  THE_PASSWORD:
     description: "Node mail password"
     required: true
 outputs:
