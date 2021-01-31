@@ -50,13 +50,13 @@ let info = {
 
 }
 
-console.log("Message sent: ", info.text);
+console.log("Message sent: ", info.text,jobs[0]);
 
 transporter.sendMail(info, function (error, data) {
     if (error) {
-        core.setFailed(error);
+        console.log(error);
     } else {
-        console.log(data['text'], "Resultado del workflow ejecutado ✔");
+        console.log("Resultado del workflow ejecutado ✔",data.response);
 
     }
 });
