@@ -7,6 +7,9 @@ inputs:
   THE_PASSWORD:
     description: "Node mail password"
     required: true
+  jobs:
+    description: JOBS pratica
+    required: true
 outputs:
   response:
     description: "Action response"
