@@ -58,5 +58,5 @@ jobs:
       with:
         domain: alexzarazua88.surge.sh
         project: .
-        token: ${{secrets.LOGIN_SURGE}}
-        login: ${{secrets.TOKEN_SURGE}}
+        login: ${{secrets.LOGIN_SURGE}}
+        token: ${{secrets.TOKEN_SURGE}}
