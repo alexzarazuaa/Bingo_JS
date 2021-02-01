@@ -7,7 +7,7 @@ const author = core.getInput("WORK_CLASS_EMAIL");
 const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");
 
-
+// JOBS OF THE WORKFLOW
 let SyntaxCodeBingo = core.getInput("SyntaxCodeBingo");
 let BingoJestTest = core.getInput("BingoJestTest");
 let BuildStatic = core.getInput("BuildStatic");
