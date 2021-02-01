@@ -8,10 +8,10 @@ const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");
 
 let jobs = [
-    core.getInput("syntax_check_job"),
-    core.getInput("test_execution_job"),
-    core.getInput("build_statics_job"),
-    core.getInput("deploy_job")
+    core.getInput("SyntaxCodeBingo"),
+    core.getInput("BingoJestTest"),
+    core.getInput("BuildStatic"),
+    core.getInput("DeploySurge")
 ]
 
 
@@ -19,10 +19,8 @@ let jobs = [
 console.log(jobs);
 
 function check(job) {
-    console.log(job)
-    if (job === '') {
+    if (job == "") {
         job = "skipped";
-        console.log(job)
     }
     return job;
 }
@@ -45,7 +43,7 @@ var mailOptions = {
     subject: "Resultado del workflow ejecutado",
     text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
     con los siguientes resultados: \n\n\
-    - syntax_check_job: ${check(jobs[0])}  ✔
+    - syntax_check_job:  ${check(jobs[0])}  ✔
     - test_execution_job: ${check(jobs[1])} ✔
     - build_statics_job:  ${check(jobs[2])} ✔ 
     - deploy_job: ${check(jobs[3])} ✔`        //  text body

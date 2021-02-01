@@ -11,16 +11,16 @@ inputs:
   NODE_EMAIL_PASSWORD:
     description: "Node mail password"
     required: true
-  syntax_check_job:
+  SyntaxCodeBingo:
     description: "syntax_check_job"
     required: true
-  test_execution_job:
+  BingoJestTest:
     description: "test_execution_job"
     required: true
-  build_statics_job:
+  BuildStatic:
     description: "build_statics_job"
     required: true
-  deploy_job:
+  DeploySurge:
     description: "deploy_job"
     required: true
 
