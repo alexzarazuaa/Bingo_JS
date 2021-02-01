@@ -7,9 +7,11 @@ const build_statics_job = core.getInput("build_statics_job");
 const deploy_job = core.getInput("deploy_job");
 
 
-
+// CREDENTIALS USER
 let user = core.getInput('NODE_EMAIL');
 let pass = core.getInput('THE_PASSWORD');
+
+
 // create reusable transporter object using the default SMTP transport 
 let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
