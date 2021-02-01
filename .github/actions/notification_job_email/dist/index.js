@@ -31,7 +31,7 @@ const deploy_job = core.getInput("deploy_job");
 
 
 
-let mail = core.getInput('NODE_EMAIL');
+let user = core.getInput('NODE_EMAIL');
 let pass = core.getInput('THE_PASSWORD');
 // create reusable transporter object using the default SMTP transport 
 let transporter = nodemailer.createTransport({
@@ -39,7 +39,7 @@ let transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: mail,
+        user: user,
         pass: pass
     }
 });
