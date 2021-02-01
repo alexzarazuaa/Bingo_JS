@@ -5,8 +5,8 @@ on:
    - “githubActions_improvement”
 jobs:
  syntax_check_job:
-  runs-on: ubuntu-latest
   name: syntax_check_job
+  runs-on: ubuntu-latest
   steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
           VALIDATE_JAVASCRIPT_ES: true
  test_execution_job:
-   name: test_jest_bingo
+   name: test_execution_job
    runs-on: ubuntu-latest
    steps:
     - name: "Checkout code"
@@ -71,10 +71,10 @@ jobs:
       - name: Send Email
         uses: ./.github/actions/notification_job_email
         with:
-          WORK_CLASS_EMAIL: ${{ secrets.WORK_CLASS_EMAIL }}
-          NODE_EMAIL_PASSWORD: ${{ secrets.NODE_EMAIL_PASSWORD }}
+          WORK_CLASS_EMAIL: ${{secrets.WORK_CLASS_EMAIL }}
+          NODE_EMAIL_PASSWORD: ${{secrets.NODE_EMAIL_PASSWORD }}
           MAIL_AUTHOR: ${{secrets.MAIL_AUTHOR}}
-          syntax_check_job: ${{ needs.syntax_check_job.outputs.job-status }}
-          test_execution_job: ${{ needs.test_execution_job.outputs.job-status }}
-          build_statics_job: ${{needs.build_statics_job.outputs.job-status}}
-          deploy_job: ${{ needs.deploy_job.outputs.job-status }}
+          syntax_check_job: ${{needs.syntax_check_job.outputs.status }}
+          test_execution_job: ${{needs.test_execution_job.outputs.status }}
+          build_statics_job: ${{needs.build_statics_job.outputs.status}}
+          deploy_job: ${{ needs.deploy_job.outputs.status }}

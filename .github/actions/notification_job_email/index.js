@@ -20,7 +20,7 @@ console.log(jobs);
 
 function check(job) {
     console.log(job)
-    if (job == "") {
+    if (job === '') {
         job = "skipped";
         console.log(job)
     }
