@@ -6,16 +6,22 @@ const author = core.getInput("WORK_CLASS_EMAIL");
 const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");
 
-
 const syntax_check_job = core.getInput("syntax_check_job");
 const test_execution_job = core.getInput("test_execution_job");
 const build_statics_job = core.getInput("build_statics_job");
 const deploy_job = core.getInput("deploy_job");
 
+console.log(syntax_check_job);
+console.log(test_execution_job);
+console.log(build_statics_job);
+console.log(deploy_job);
+
+
 //Esta funcion comrpueba si el job esta vacio (ya que si es skipped no guarda ningun estado)_
 function check(job) {
     if (job == "") {
-        job = "skipped";
+         job = "SKIPPED";
+        console.log(job)
     }
     return job;
 }
