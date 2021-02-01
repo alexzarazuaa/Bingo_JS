@@ -220,3 +220,43 @@ Para comprobar que todo ha ido bien, primero nos dirigimos a github para ver que
 
 * <img src="./images/surge_running.png">
 
+
+### Job de envío de notificación a los usuarios del proyecto.
+
+Este job se encargará de enviar un correo con:
+ *  **Destinatario**: dirección de correo vuestra personal tomada de un
+secret de github
+ *  **Asunto**: Resultado del workflow ejecutado
+ *  **Cuerpo del mensaje** :
+       * Se ha realizado un push en la rama githubActions_improvement que
+      ha provocado la ejecución del workflow Bingo_Workflow con los
+      siguientes resultados:
+          * **syntax_check_job**: resultado asociada
+          * **test_execution_job**: resultado asociada
+          * **build_statics_job**: resultado asociada
+          * **deploy_job**: resultado asociada
+
+
+Bien, en primer lugar , lo que hize fue instalar la libreria nodemailer de npm, la cual utilizaremos para el envio del correo.
+ * **Nodemailer** es un módulo para aplicaciones Node.js que permite el envío de correos electrónicos de forma sencilla.
+
+ * La instalamos con el siguiente comando : ` npm install nodemailer ` .
+
+ * <img src="./images/nodeemailr_i.png">
+
+ En segundo lugar,crearemos una carpeta dentro del directorio .github , la cual se llamara actions y dentro de esta crearemos otro directorio en mi caso llamado *notification_job_email* y dentro de este será donde crearemos el actions.yml y un proyecto basico de nodeJs con un package.json creado gracias al comando `  npm init ` y un index.js.
+
+ * <img src="./images/estruc1.png">
+ * <img src="./images/estruc2.png">
+
+**_La carpeta Dist, la conseguimos al realizar el comando ` ncc build index.js, y este comando lo realizamos siempre y cuando tengamos un nuevo cambio en el index.js_**
+
+Además me cree un nuevo correo de gmail que se encargará de enviar los correo por medio de nodemailer,en el gmail de este correo active dos opciones, la de : _permitir que aplicaciones poco seguras accedan a tu cuenta_ y el _IMAP_.
+
+También utilizaremos los secrets de github , en este caso para almacenar el correo que enviará el mail , su contraseña, y el mail el cual recibiria los correos .
+
+* <img src="./images/tokens_mail.png">
+
+
+
+
