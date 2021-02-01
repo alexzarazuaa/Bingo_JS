@@ -35,9 +35,7 @@ let mail = core.getInput('NODE_EMAIL');
 let pass = core.getInput('THE_PASSWORD');
 // create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com", //host
-    port: 460,     //port
-    secure: true,  //secure
+    service: "gmail",
     auth: {
         user: mail,
         pass: pass
