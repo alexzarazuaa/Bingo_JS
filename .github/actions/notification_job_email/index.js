@@ -2,7 +2,7 @@ var nodemailer = require("nodemailer");
 const core = require("@actions/core");
 
 
-// CREDENTUALS
+// CREDENTUALS 
 const author = core.getInput("WORK_CLASS_EMAIL");
 const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");

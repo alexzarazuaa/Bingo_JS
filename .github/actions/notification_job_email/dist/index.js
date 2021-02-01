@@ -25,7 +25,7 @@ var nodemailer = __nccwpck_require__(7170);
 const core = __nccwpck_require__(6066);
 
 
-// CREDENTUALS
+// CREDENTUALS 
 const author = core.getInput("WORK_CLASS_EMAIL");
 const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");
