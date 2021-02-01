@@ -11,8 +11,10 @@ const deploy_job = core.getInput("deploy_job");
 let mail = core.getInput('NODE_EMAIL');
 let pass = core.getInput('THE_PASSWORD');
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport({
-    service: "gmail",
+let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
         user: mail,
         pass: pass
