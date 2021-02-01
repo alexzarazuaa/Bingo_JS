@@ -8,16 +8,16 @@ inputs:
     description: "Node mail password"
     required: true
   syntax_check_job:
-    description: JOBS 1
+    description: "syntax_check_job"
     required: true
   test_execution_job:
-    description: JOBS 2
+    description: "test_execution_job"
     required: true
   build_statics_job:
-    description: JOBS 3
+    description: "build_statics_job"
     required: true
   deploy_job:
-    description: JOBS 4
+    description: "deploy_job"
     required: true
 
 outputs:
