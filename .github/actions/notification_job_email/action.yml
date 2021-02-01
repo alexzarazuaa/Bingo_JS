@@ -1,11 +1,15 @@
-name: "Usign The sender mail npm nodemailer"
-description: "Action for send the email"
+name: "The npm nodemailer"
+description: "Action send the email"
+
 inputs:
   NODE_EMAIL:
     description: "The Email"
     required: true
   THE_PASSWORD:
     description: "Node mail password"
+    required: true
+  MAIL_AUTHOR:
+    description: "author mail test"
     required: true
   syntax_check_job:
     description: "syntax_check_job"
@@ -23,6 +27,7 @@ inputs:
 outputs:
   response:
     description: "Action response"
+
 runs:
   using: "node12"
   main: "dist/index.js"

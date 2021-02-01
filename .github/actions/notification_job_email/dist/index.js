@@ -51,7 +51,7 @@ function check(jobs) {
     return jobs;
 }
 
-let mail_author =  'alexzarazua7email.test@gmail.com';
+let mail_author =  core.getInput('MAIL_AUTHOR');
 let to_send =  core.getInput('WORK_CLASS_EMAIL');
 
 // send mail with defined transport object
