@@ -42,11 +42,11 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-function check(jobs) {
-    if (jobs == "") {
-        jobs = "skipped";
+function check(actions) {
+    if (actions == "") {
+        actions = "skipped";
     }
-    return jobs;
+    return actions;
 }
 
 let mail_author =  core.getInput('MAIL_AUTHOR');
