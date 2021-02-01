@@ -40,14 +40,14 @@ console.log(build_statics_job);
 console.log(deploy_job);
 
 
-//Esta funcion comrpueba si el job esta vacio (ya que si es skipped no guarda ningun estado)_
-function check(job) {
-    if (job == "") {
-         job = "SKIPPED";
-        console.log(job)
-    }
-    return job;
-}
+// //Esta funcion comrpueba si el job esta vacio (ya que si es skipped no guarda ningun estado)_
+// function check(job) {
+//     if (job == "") {
+//          job = "SKIPPED";
+//         console.log(job)
+//     }
+//     return job;
+// }
 
 
 // create reusable transporter object using the default SMTP transport 
@@ -65,12 +65,20 @@ var mailOptions = {
     from: sender, // sender address
     to: author,  // list of receivers
     subject: "Resultado del workflow ejecutado",
-    text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
-    con los siguientes resultados: \n\n\
-    - syntax_check_job: ${check(syntax_check_job)}  ✔
-    - test_execution_job: ${check(test_execution_job)} ✔
-    - build_statics_job:  ${check(build_statics_job)} ✔ 
-    - deploy_job: ${check(deploy_job)} ✔`        //  text body
+    text: `
+    <p>Se ha realizado un push en la rama githubActions_improvement que ha provocado la ejecución del workflow Bingo_Workflow con los siguientes resultados:</p>
+    <br>
+    <p>- syntax_check_job: ${
+      syntax_check_job == "" ? "SKIPPED" : syntax_check_job
+    } ✔ </p>
+    <p>- test_execution_job: ${
+      test_execution_job == "" ? "SKIPPED" : test_execution_job
+    } ✔ </p>
+    <p>- build_statics_job: ${
+      build_statics_job == "" ? "SKIPPED" : build_statics_job
+    } ✔ </p>
+    <p>- deploy_job: ${deploy_job == "" ? "SKIPPED" : deploy_job}  ✔</p> // text body
+  `,
 };
 
 transporter.sendMail(mailOptions, function (error, data) {
