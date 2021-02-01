@@ -278,6 +278,11 @@ Al realizar el push en la rama se ejecutaran todos los jobs con sus steps y acti
 * <img src="./images/arti3.png">
 
 
+Y comprobamos que hemos recibido un mail de la direccion que hayamos configurado en el index.js, algo similiar a este : 
+
+* <img src="./images/mail_recibido.png">
+
+
 ### Job de actualización del README principal del proyecto. 
 
 Su finalidad será actualizar el contenido del README principal del proyecto para que muestre un texto al final con 
