@@ -30,13 +30,11 @@ const author = core.getInput("WORK_CLASS_EMAIL");
 const sender = core.getInput("MAIL_AUTHOR");
 const pass = core.getInput("NODE_EMAIL_PASSWORD");
 
-let jobs = [
-    core.getInput("SyntaxCodeBingo"),
-    core.getInput("BingoJestTest"),
-    core.getInput("BuildStatic"),
-    core.getInput("DeploySurge")
-]
 
+let SyntaxCodeBingo = core.getInput("SyntaxCodeBingo");
+let BingoJestTest = core.getInput("BingoJestTest");
+let BuildStatic = core.getInput("BuildStatic");
+let DeploySurge = core.getInput("DeploySurge");
 
 
 console.log(jobs);
@@ -63,13 +61,13 @@ var transporter = nodemailer.createTransport({
 var mailOptions = {
     from: sender, // sender address
     to: author,  // list of receivers 
-    subject: "Resultado del workflow ejecutado",
+    subject: "Resultado del workflow ejecutado.",
     text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
     con los siguientes resultados: \n\n\
-    - syntax_check_job:  ${check(jobs[0])}  ✔
-    - test_execution_job: ${check(jobs[1])} ✔
-    - build_statics_job:  ${check(jobs[2])} ✔ 
-    - deploy_job: ${check(jobs[3])} ✔`        //  text body
+    - syntax_check_job:  ${check(SyntaxCodeBingo)}  ✔
+    - test_execution_job: ${check(BingoJestTest)} ✔
+    - build_statics_job:  ${check(BuildStatic)} ✔ 
+    - deploy_job: ${check(DeploySurge)} ✔`        //  text body
 };
 
 transporter.sendMail(mailOptions, function (error, data) {
