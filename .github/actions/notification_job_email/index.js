@@ -39,7 +39,7 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
     from: sender, // sender address
-    to: author,  // list of receivers
+    to: author,  // list of receivers 
     subject: "Resultado del workflow ejecutado",
     text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
     con los siguientes resultados: \n\n\
