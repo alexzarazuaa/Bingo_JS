@@ -278,3 +278,8 @@ Con las caracteristicas de que tiene tres actions, uno para comprobar el código
 * Por lo tanto, sed lo que hace es ver la fecha actual  y añadir la linea en el README.md del proyecto.
 
 * Luego,tenemos el otro run para subir los cambios del sed al repositorio de github.
+
+
+
+
+### _ALEX ZARAZUA SOLER_
