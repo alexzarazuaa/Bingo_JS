@@ -259,4 +259,22 @@ También utilizaremos los secrets de github , en este caso para almacenar el cor
 
 
 
+### Job de envío de notificación a los usuarios del proyecto.
 
+Su finalidad será actualizar el contenido del README principal del proyecto para que muestre un texto al final con 
+“Ultima versión desplegada el día: FECHA_DE_ÚLTIMO_DESPLIEGUE” .
+
+Bien para ello, solo hará falta crear un nuevo job en el workflow llamado 'update_readme_job',el cual se ejecutará siempre y cuandoel job encargado de
+realizar el deploy 'deploy_job' ha funcionado correctamente.
+El job quedaría de esta manera : 
+
+* <img src="./images/update_readme.png">
+
+
+Con las caracteristicas de que tiene tres actions, uno para comprobar el código, el otro que se encargar de hacer el update en el readme, gracias a los comandos  : `           sed -i '$d' README.md echo -e "\n  Ultima versión desplegada el día --> `date`" >> README.md`
+
+* **SED** _es una herramienta poderosa que ayuda a realizar una tarea que puede tener múltiples propósitos, como lo es analizar y transformar texto._
+
+* Por lo tanto, sed lo que hace es ver la fecha actual  y añadir la linea en el README.md del proyecto.
+
+* Luego,tenemos el otro run para subir los cambios del sed al repositorio de github.
