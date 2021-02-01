@@ -98,4 +98,5 @@ $ sudo n stable
 
 
 
- Ultima versión desplegada el día,fecha del ultimo despliegue: Mon Feb  1 16:16:08 UTC 2021
+
+  Ultima versión desplegada el día --> Mon Feb  1 16:34:14 UTC 2021
