@@ -44,7 +44,7 @@ var mailOptions = {
     - syntax_check_job:  ${check(SyntaxCodeBingo)}  ✔
     - test_execution_job: ${check(BingoJestTest)} ✔
     - build_statics_job:  ${check(BuildStatic)} ✔ 
-    - deploy_job: ${check(DeploySurge)} ✔`        //  text body
+    - deploy_job: ${check(DeploySurge)} ✔`        //text body
 };
 
 transporter.sendMail(mailOptions, function (error, data) {
