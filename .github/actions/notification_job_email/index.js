@@ -7,9 +7,9 @@ const build_statics_job = core.getInput("build_statics_job");
 const deploy_job = core.getInput("deploy_job");
 
 
-// CREDENTIALS USER
-let user = core.getInput('NODE_EMAIL');
-let pass = core.getInput('THE_PASSWORD');
+// CREDENTUALS
+let user = core.getInput('MAIL_AUTHOR');
+let pass = core.getInput('NODE_EMAIL_PASSWORD');
 
 
 // create reusable transporter object using the default SMTP transport 
@@ -30,12 +30,12 @@ function check(actions) {
     return actions;
 }
 
-let mail_author =  core.getInput('MAIL_AUTHOR');
+
 let to_send =  core.getInput('WORK_CLASS_EMAIL');
 
 // send mail with defined transport object
 let info = {
-    from: mail_author,// sender address
+    from: user,// sender address
     to: to_send, // list of receivers
     subject: "Resultado del workflow ejecutado ✔", // Subject line
     text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 

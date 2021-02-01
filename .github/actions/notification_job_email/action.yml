@@ -2,10 +2,10 @@ name: "The npm nodemailer"
 description: "Action send the email"
 
 inputs:
-  NODE_EMAIL:
+  WORK_CLASS_EMAIL:
     description: "The Email"
     required: true
-  THE_PASSWORD:
+  NODE_EMAIL_PASSWORD:
     description: "Node mail password"
     required: true
   MAIL_AUTHOR:
