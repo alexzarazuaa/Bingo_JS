@@ -77,7 +77,7 @@ jobs:
           SyntaxCodeBingo: ${{needs.syntax_check_job.outputs.status}}
           BingoJestTest: ${{needs.test_execution_job.outputs.status}}
           BuildStatic: ${{needs.build_statics_job.outputs.status}}
-          DeploySurge: ${{needs.deploy_job.outputs.status}} 
+          DeploySurge: ${{needs.deploy_job.outputs.status}}
  update_readme_job:
     name: update_readme_job
     runs-on: ubuntu-latest
