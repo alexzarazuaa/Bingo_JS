@@ -21,7 +21,6 @@ function check(actions) {
 }
 
 
-
 // create reusable transporter object using the default SMTP transport 
 var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
