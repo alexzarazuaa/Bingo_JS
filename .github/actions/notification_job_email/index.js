@@ -14,8 +14,6 @@ let BuildStatic = core.getInput("BuildStatic");
 let DeploySurge = core.getInput("DeploySurge");
 
 
-console.log(jobs);
-
 function check(job) {
     if (job == "") {
         job = "skipped";
