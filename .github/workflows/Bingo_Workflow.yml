@@ -74,10 +74,10 @@ jobs:
           WORK_CLASS_EMAIL: ${{secrets.WORK_CLASS_EMAIL }}
           NODE_EMAIL_PASSWORD: ${{secrets.NODE_EMAIL_PASSWORD }}
           MAIL_AUTHOR: ${{secrets.MAIL_AUTHOR}}
-          SyntaxCodeBingo: ${{needs.syntax_check_job.outputs.job-status}}
-          BingoJestTest: ${{needs.test_execution_job.outputs.job-status}}
-          BuildStatic: ${{needs.build_statics_job.outputs.job-status}}
-          DeploySurge: ${{needs.deploy_job.outputs.job-status}} 
+          SyntaxCodeBingo: ${{needs.syntax_check_job.outputs.status}}
+          BingoJestTest: ${{needs.test_execution_job.outputs.status}}
+          BuildStatic: ${{needs.build_statics_job.outputs.status}}
+          DeploySurge: ${{needs.deploy_job.outputs.status}} 
  update_readme_job:
     name: update_readme_job
     runs-on: ubuntu-latest
