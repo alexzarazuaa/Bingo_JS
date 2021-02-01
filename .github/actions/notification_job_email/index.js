@@ -42,7 +42,7 @@ let info = {
     - deploy_job: ${check(deploy_job)} ✔`        //  text body
 }
 
-console.log("Message sent: ", info.text);
+console.log("Message sent ✔: ", info.text);
 
 transporter.sendMail(info, function (error, data) {
     if (error) {
