@@ -74,7 +74,25 @@ jobs:
           WORK_CLASS_EMAIL: ${{secrets.WORK_CLASS_EMAIL }}
           NODE_EMAIL_PASSWORD: ${{secrets.NODE_EMAIL_PASSWORD }}
           MAIL_AUTHOR: ${{secrets.MAIL_AUTHOR}}
-          syntax_check_job: ${{needs.syntax_check_job.outputs.status }}
-          test_execution_job: ${{needs.test_execution_job.outputs.status }}
-          build_statics_job: ${{needs.build_statics_job.outputs.status}}
-          deploy_job: ${{ needs.deploy_job.outputs.status }}
+          syntax_check_job: ${{needs.syntax_check_job.outputs.job-status}}
+          test_execution_job: ${{needs.test_execution_job.outputs.job-status}}
+          build_statics_job: ${{needs.build_statics_job.outputs.job-status}}
+          deploy_job: ${{needs.deploy_job.outputs.job-status}}
+ update_readme_job:
+    name: update_readme_job
+    runs-on: ubuntu-latest
+    needs: deploy_job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Update date in Readme
+        run: |
+          sed -i '$d' README.md
+          echo -e "\n Ultima versión desplegada el día,fecha del ultimo despliegue: `date`" >> README.md
+      - name: Push  to repository
+        run: |
+          git config user.name alexzarazuaa
+          git config user.email alexzarazua88@gmail.com
+          git add .
+          git commit -m "Actualizado el readme"
+          git push origin githubActions_improvement
