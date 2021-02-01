@@ -13,11 +13,11 @@ const build_statics_job = core.getInput("build_statics_job");
 const deploy_job = core.getInput("deploy_job");
 
 //Esta funcion comrpueba si el job esta vacio (ya que si es skipped no guarda ningun estado)_
-function check(actions) {
-    if (actions == "") {
-        actions = "skipped";
+function check(job) {
+    if (job == "") {
+        job = "skipped";
     }
-    return actions;
+    return job;
 }
 
 

@@ -3,13 +3,13 @@ description: "Send a mail message"
 
 inputs:
   WORK_CLASS_EMAIL:
-    description: "Email Author"
+    description: "The Email"
     required: true
   MAIL_AUTHOR:
     description: "Email del sender"
     required: true
   NODE_EMAIL_PASSWORD:
-    description: "Contraseña del sender"
+    description: "Node mail password"
     required: true
   syntax_check_job:
     description: "syntax_check_job"
