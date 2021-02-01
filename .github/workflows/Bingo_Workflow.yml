@@ -7,6 +7,9 @@ jobs:
  syntax_check_job:
   name: syntax_check_job
   runs-on: ubuntu-latest
+  outputs:
+      status: ${{ job.status }}
+
   steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,6 +24,8 @@ jobs:
  test_execution_job:
    name: test_execution_job
    runs-on: ubuntu-latest
+   outputs:
+      status: ${{ job.status }}
    steps:
     - name: "Checkout code"
       uses: actions/checkout@v2
@@ -31,6 +36,8 @@ jobs:
  build_statics_job:
     name: build_statics_job
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ job.status }}
     needs: [syntax_check_job, test_execution_job]
     steps:
       - name: Checkout Code
@@ -47,6 +54,8 @@ jobs:
  deploy_job:
     name: deploy_job
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ job.status }}
     needs: build_statics_job
     steps:
     - name: artifact for download the build
