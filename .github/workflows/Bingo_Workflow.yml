@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Testing send email
+      - name: Testing email
         uses: ./.github/actions/notification_job_email
         with:
           WORK_CLASS_EMAIL: ${{ secrets.WORK_CLASS_EMAIL }}

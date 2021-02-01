@@ -1,15 +1,15 @@
-name: "The npm nodemailer"
-description: "Action send the email"
+name: "Nodemailer librari"
+description: "Send a mail message"
 
 inputs:
   WORK_CLASS_EMAIL:
-    description: "The Email"
-    required: true
-  NODE_EMAIL_PASSWORD:
-    description: "Node mail password"
+    description: "Email Author"
     required: true
   MAIL_AUTHOR:
-    description: "author mail test"
+    description: "Email del sender"
+    required: true
+  NODE_EMAIL_PASSWORD:
+    description: "Contraseña del sender"
     required: true
   syntax_check_job:
     description: "syntax_check_job"
@@ -25,8 +25,8 @@ inputs:
     required: true
 
 outputs:
-  response:
-    description: "Action response"
+  message:
+    description: "Response message"
 
 runs:
   using: "node12"

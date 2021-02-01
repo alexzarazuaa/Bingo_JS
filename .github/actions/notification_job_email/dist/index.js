@@ -21,31 +21,21 @@ module.exports = JSON.parse("{\"_from\":\"nodemailer@^6.4.17\",\"_id\":\"nodemai
 /***/ 9211:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
-let nodemailer = __nccwpck_require__(7170);
-let core = __nccwpck_require__(6066);
+var nodemailer = __nccwpck_require__(7170);
+const core = __nccwpck_require__(6066);
+
+// CREDENTUALS
+const author = core.getInput("WORK_CLASS_EMAIL");
+const sender = core.getInput("MAIL_AUTHOR");
+const pass = core.getInput("NODE_EMAIL_PASSWORD");
+
 
 const syntax_check_job = core.getInput("syntax_check_job");
 const test_execution_job = core.getInput("test_execution_job");
 const build_statics_job = core.getInput("build_statics_job");
 const deploy_job = core.getInput("deploy_job");
 
-
-// CREDENTUALS
-let user = core.getInput('MAIL_AUTHOR');
-let pass = core.getInput('NODE_EMAIL_PASSWORD');
-
-
-// create reusable transporter object using the default SMTP transport 
-let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        user: user,
-        pass: pass
-    }
-});
-
+//Esta funcion comrpueba si el job esta vacio (ya que si es skipped no guarda ningun estado)_
 function check(actions) {
     if (actions == "") {
         actions = "skipped";
@@ -54,34 +44,37 @@ function check(actions) {
 }
 
 
-let to_send =  core.getInput('WORK_CLASS_EMAIL');
 
-// send mail with defined transport object
-let info = {
-    from: user,// sender address
-    to: to_send, // list of receivers
-    subject: "Resultado del workflow ejecutado ✔", // Subject line
+// create reusable transporter object using the default SMTP transport 
+var transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+        user: sender,
+        pass: pass,
+    },
+});
+
+var mailOptions = {
+    from: sender, // sender address
+    to: author,  // list of receivers
+    subject: "Resultado del workflow ejecutado",
     text: `Se ha realizado un push en la rama "githubActions_improvement" que ha provocado la ejecución del workflow Bingo_Workflow 
     con los siguientes resultados: \n\n\
     - syntax_check_job: ${check(syntax_check_job)}  ✔
     - test_execution_job: ${check(test_execution_job)} ✔
     - build_statics_job:  ${check(build_statics_job)} ✔ 
     - deploy_job: ${check(deploy_job)} ✔`        //  text body
-}
+};
 
-console.log("Message sent ✔: ", info.text);
-
-transporter.sendMail(info, function (error, data) {
+transporter.sendMail(mailOptions, function (error, data) {
     if (error) {
         console.log(error);
     } else {
-        console.log("Resultado del workflow ejecutado ✔",data.response);
-
+        console.log("Email sent: " + data.response);
     }
 });
-
-
-
 
 /***/ }),
 
