@@ -257,9 +257,28 @@ También utilizaremos los secrets de github , en este caso para almacenar el cor
 
 * <img src="./images/tokens_mail.png">
 
+Por lo que el action.yml,el indexx.js y el workflow quedarian de la siguiente manera : 
+
+* <img src="./images/action_mail.png">
+
+* <img src="./images/work_mail.png">
+
+* <img src="./images/index_part1.png">
+
+* <img src="./images/index_part2.png">
+
+Al realizar el push en la rama se ejecutaran todos los jobs con sus steps y actions, y para comprobar que ha ido bien , nos dirigimos a github y vemos que todo está correctamente.
 
 
-### Job de envío de notificación a los usuarios del proyecto.
+
+* <img src="./images/acti_mail1.png">
+
+* <img src="./images/acti_mail2.png">
+
+* <img src="./images/arti3.png">
+
+
+### Job de actualización del README principal del proyecto. 
 
 Su finalidad será actualizar el contenido del README principal del proyecto para que muestre un texto al final con 
 “Ultima versión desplegada el día: FECHA_DE_ÚLTIMO_DESPLIEGUE” .
